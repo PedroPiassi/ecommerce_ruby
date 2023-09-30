@@ -8,7 +8,18 @@
     "build:css": "yarn build:css:compile && yarn build:css:prefix",
     "watch:css": "nodemon --watch ./app/assets/stylesheets/ --ext scss --exec \"yarn build:css\""
   },
-  "browserslist": [
-    "defaults"
-  ]
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/turbo-rails": "^7.3.0",
+    "@popperjs/core": "^2.11.8",
+    "@rails/webpacker": "5.4.4",
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.1",
+    "esbuild": "^0.19.4",
+    "webpack": "4.46.0",
+    "webpack-cli": "3.3.12"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "3"
+  }
 }
