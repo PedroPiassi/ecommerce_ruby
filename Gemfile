@@ -36,6 +36,8 @@ gem 'webpacker'
 
 gem 'simple_form'
 
+gem 'webmock'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

@@ -2,6 +2,7 @@ require 'spec_helper'
 require 'vcr'
 require 'simplecov'
 require 'faker'
+require 'webmock/rspec'
 
 ENV['RAILS_ENV'] ||= 'test'
 
@@ -32,7 +33,7 @@ Shoulda::Matchers.configure do |config|
     with.test_framework :rspec
     with.library :rails
   end
-ends
+end
 
 VCR.configure do |config|
   config.cassette_library_dir = 'sfixtures/vcr'
