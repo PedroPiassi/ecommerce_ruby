@@ -2,8 +2,8 @@
 
 <% if user_signed_in? %>
     <h1>Bem vindo ao nosso Ecommerce</h1>
-    <%= link_to "logout", destroy_user_session_path, method: :delete %>
+    <%= link_to "Sair", destroy_user_session_path, method: :delete, class: "nav-link"  %>
 <% else %>
     <h1>Você não está logado... Por favor, se cadastre. <%= link_to "Sign up", new_user_registration_path %></h1>
-    <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
+    <%= link_to "Entrar", new_user_session_path, :class => 'navbar-link' %>
 <% end %>
