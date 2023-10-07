@@ -9,7 +9,10 @@ module Admin
         def edit; end
         
         def new
-            @product = Product.new
+            @product = authorize Product.new
+        rescue Pundit::NotAuthorizedError
+            flash[:notice] = 'Produto só pode ser criado se tiver ao menos uma categoria.'
+            redirect_to action: :index
         end
 
         def show; end
