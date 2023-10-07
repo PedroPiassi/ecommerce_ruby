@@ -18,6 +18,7 @@
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.1",
     "esbuild": "^0.19.4",
+    "inputmask": "^5.0.8",
     "jquery": "^3.7.1",
     "webpack": "4.46.0",
     "webpack-cli": "3.3.12"
