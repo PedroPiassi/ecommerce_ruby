@@ -14,6 +14,10 @@
             <% @products.each do |product| %>
                 <div class="col mb-5">
                     <div class="card h-100">
+                        <% if product.promo? %>
+                            <div class="badge bg-danger text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Promoção</div>
+                        <% end %>
+                        
                         <% if product && product.image.present? %>
                             <%= image_tag product.image, class: 'card-img-top' %>
                         <% else %>
@@ -22,7 +26,15 @@
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <h5 class="fw-bolder"><%= product.name %></h5>
-                                <%= number_to_currency product.price %>
+
+                                <% if product.promo? %>
+                                    <span class="text-muted text-decoration-line-through"><%= number_to_currency product.price %></span><br>
+                                    <%= number_to_currency product.promo_price %>
+                                <% else %>
+                                    <%= number_to_currency product.price %>
+                                <% end %>
+                                
+                                
                             </div>
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
