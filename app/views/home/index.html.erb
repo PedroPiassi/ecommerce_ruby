@@ -27,14 +27,7 @@
                             <div class="text-center">
                                 <h5 class="fw-bolder"><%= product.name %></h5>
 
-                                <% if product.promo? %>
-                                    <span class="text-muted text-decoration-line-through"><%= number_to_currency product.price %></span><br>
-                                    <%= number_to_currency product.promo_price %>
-                                <% else %>
-                                    <%= number_to_currency product.price %>
-                                <% end %>
-                                
-                                
+                                <%= ProductDecorator.new(product).full_promo %>
                             </div>
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
