@@ -16,9 +16,9 @@
 
                         <%= simple_form_for current_user, url: update_user_settings_path, data: { turbo: false } do |f| %>
                             <%= f.input :avatar, label: false %>
-                            <%= f.input :name %>
-                            <%= f.input :email, readonly: true, disabled: true %>
-                            <%= f.input :phone, input_html: { class: 'mask-phone' } %>
+                            <%= f.input :name, label: 'Nome' %>
+                            <%= f.input :email, label: 'E-mail', readonly: true, disabled: true %>
+                            <%= f.input :phone, label: 'Telefone', input_html: { class: 'mask-phone' } %>
                             <%= f.button :submit, "Atualizar", class: 'btn btn-primary' %>
                         <% end %>
                     </div>
