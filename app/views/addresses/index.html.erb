@@ -14,26 +14,29 @@
             <% if @addresses.any? %>
               <table class="table">
                 <thead>
-                <tr>
-                  <th scope="col">Nome</th>
-                  <th scope="col">Rua</th>
-                  <th scope="col">Bairro</th>
-                  <th scope="col">Número</th>
-                  <th scope="col">CEP</th>
-                </tr>
-                </thead>
-                <tbody>
-                <% @addresses.each do |address| %>
                   <tr>
-                    <td><%= address.name %></td>
-                    <td><%= address.street %></td>
-                    <td><%= address.neighborhood %></td>
-                    <td><%= address.number %></td>
-                    <td><%= address.zipcode %></td>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Rua</th>
+                    <th scope="col">Bairro</th>
+                    <th scope="col">Número</th>
+                    <th scope="col">CEP</th>
                   </tr>
-                <% end %>
+                </thead>
+
+                <tbody>
+                  <% @addresses.each do |address| %>
+                    <tr>
+                      <td><%= address.name %></td>
+                      <td><%= address.street %></td>
+                      <td><%= address.neighborhood %></td>
+                      <td><%= address.number %></td>
+                      <td><%= address.zipcode %></td>
+                    </tr>
+                  <% end %>
                 </tbody>
+
               </table>
+
             <% else %>
               <h5>Nenhum endereço cadastrado.</h5>
             <% end %>
